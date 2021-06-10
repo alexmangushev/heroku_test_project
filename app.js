@@ -155,6 +155,7 @@ function start_App() {
                 qos: 0
             }, () => {})
             console.log('включаю')
+            res.send('ok')
             
 
 
@@ -168,6 +169,7 @@ function start_App() {
                     qos: 0
                 }, () => {})
                 console.log('выключаю')
+                res.send('ok')
                 
             }
         }

@@ -8,20 +8,16 @@ function send(message_MQTT) {
     alert("Сообщение отправлено")
 
     //отправляем данные через POST запрос /api/MQTT
-    fetch('http://localhost:3000/api/MQTT', {
-        method: 'POST', //тип запроса
-        body: message_MQTT_JSON, // данные 
+    const response = await fetch('/api/MQTT', {
+        method: 'POST',
         headers: {
-        'Content-Type': 'application/json'
-        }
-    }).then(function(response) {
-        if (response.ok) {
-            console.log("MQTT_ok")
-        }
-        else {
-            console.log("MQTT_something wrong")
-        }
+            'Content-Type': 'application/json'
+        },
+        body: message_MQTT_JSON
     })
+    if (response.ok) {
+        console.log(await response.json())
+    }
 }
 
 MQTT_on.onclick = function() {
@@ -75,19 +71,15 @@ btn_in.onclick = function() {
     //console.log(message_info_JSON); 
 
     //отправляем данные через POST запрос /api/order
-    fetch('http://localhost:3000/api/order', {
-        method: 'POST', //тип запроса
-        body: message_info_JSON, // данные 
+    const response = await fetch('/api/order', {
+        method: 'POST',
         headers: {
-        'Content-Type': 'application/json'
-        }
-    }).then(function(response) {
-        if (response.ok) {
-            alert("ok")
-        }
-        else {
-            alert("something wrong")
-        }
+            'Content-Type': 'application/json'
+        },
+        body: message_info_JSON
     })
+    if (response.ok) {
+        console.log(await response.json())
+    }
 
 }
