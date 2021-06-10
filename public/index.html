@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker_OnLine</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+
+            <div class="header__logo">
+                <img src="images/worker_online logo.png" alt="">
+            </div>
+
+            <nav class="nav">
+                <a class="nav__link" href="#about_product_page" id="product">О продукте</a>
+                <a class="nav__link" href="#demo_page" id="demo">Демонстрация</a>
+                <a class="nav__link" href="#about_page" id="about">О Нас</a>
+                <a class="nav__link" href="#contacts_page" id="contacts">Контакты</a>
+            </nav>
+
+        </div>
+    </div> 
+</header>
+
+<!-- intro -->
+<div class="intro">
+    <div class="container">
+
+        <div class="intro__inner">
+            <h1 class="intro__title">Улучшите безопасность своих подчиненных</h1>
+        </div>
+
+    </div>
+</div>
+
+<!-- about product -->
+<div class="about_product" id="about_product_page">
+    <div class="container" id="container_mod">
+        
+        <div class="inner">
+            <h2 class="title">О продукте</h2>
+        </div>
+
+
+        <div class="product_discription">
+            <div class="discription_1">
+                Основная цель проекта – разработка устройства, контролирующего 
+                жизненные показатели работника на опасных производствах и 
+                осуществляющего сбор и передачу сопутствующей информации.
+                <img class="picture" src="images/content/stroyka1.jpg" alt="">
+            </div>
+
+            <div class="discription_1">
+                Система должна состоять из двух ключевых узлов: носимое устройство и серверная программа.
+                Носимое устройство – небольшая коробка, которую можно закрепить на поясе. 
+                К ней посредством Bluetooth подключается браслет, который несет в себе часть 
+                сенсоров. Браслет закрепляется на руке носителя. 
+                <br><img class="picture_2" src="images/content/trecker.jpg" alt="">
+            </div>
+
+            <div class="discription_1">
+                <br>Браслет может содержать в себе пульсоксиметр, 
+                датчик окружающей температуры. Кроме того, на нем можно разместить 
+                небольшой дисплей для вывода важной информации. Конструкция браслета 
+                должна предполагать, что часть перечисленного выше оборудования может 
+                быть не установлена по согласованию с заказчиком. Кроме того, должна быть 
+                возможность полного отказа от использования браслета, если он не нужен заказчику.
+                <img class="picture_3" src="images/content/bracelet.png" alt="">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- demo -->
+<div class="demo" id="demo_page">
+    <div class="container" id="container_mod">
+
+        <div class="inner">
+            <h2 class="title">Демонстрация</h2>
+        </div>
+        
+        <div class="demo_discription">
+            <p>
+                Здесь вы можете проверить работу собранного на данный момент прототипа.
+                При нажатии на кнопку "включить" светодиод на макете начнет светиться.
+                Если же Вы нажмете кнопку "выключить", то он потухнет.
+            </p>
+
+            <p>
+                Данный функционал реализован при помощи протокола передачи MQTT.
+                В качестве брокера используется публичный брокер broker.hivemq.com,
+                TCP порт: 1883, топик scooter1. При нажатии одной из кнопок 
+                в этот топик отправляется сообщение ";on" или ";of".
+            </p>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button class="btn" id="btn_on">
+                Включить светодиод
+            </button>
+    
+    
+            <button class="btn" id="btn_off">
+                Выключить светодиод
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- about us -->
+<div class="about_us" id="about_page">
+    <div class="container" id="container_mod_1">
+        
+        <div class="inner">
+            <h2 class="title">О нас</h2>
+        </div>
+
+        <div class="we">
+
+            <div class="member_card">
+                <img src="images/team_img/Alex_1.jpg" alt="">
+                <p>
+                    Александр
+                    <br>Инженер-программист
+                </p>
+            </div>
+
+            <div class="member_card">
+                <img src="images/team_img/Gleb.png" alt="">
+                <p>
+                    Глеб
+                    <br>Контент-мейкер
+                </p>
+            </div>
+
+            <div class="member_card">
+                <img src="images/team_img/Dmitri.jpg" alt="">
+                <p>
+                    Дмитрий
+                    <br>Дизайнер
+                </p>
+            </div>
+
+            <div class="member_card">
+                <img src="images/team_img/Alex_2.jpg" alt="">
+                <p>
+                    Александр
+                    <br>Идейный вдохновитель
+                </p>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+<!-- contacts -->
+<div class="contacts" id="contacts_page">
+    <div class="container" id="container_mod">
+        
+        <div class="inner">
+            <h2 class="title">Контакты</h2>
+        </div>
+
+        <div class="map">
+            <p class="address">Россия, 400005, Волгоград, пр. им. Ленина, 28 
+                <br>(8442) 23-00-76
+            </p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1316.2572318489008!2d44.52780227094218!3d48.714760598344185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x411acb2c30fd5ee5%3A0x1d029c2e9564348d!2z0L_RgC4g0LjQvNC10L3QuCDQki7QmC4g0JvQtdC90LjQvdCwLCAyOCwg0JLQvtC70LPQvtCz0YDQsNC0LCDQktC-0LvQs9C-0LPRgNCw0LTRgdC60LDRjyDQvtCx0LsuLCA0MDAwMDU!5e0!3m2!1sru!2sru!4v1622304664788!5m2!1sru!2sru" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        
+        </div>
+        
+    </div>
+</div>
+
+<!-- call_back -->
+<div class="call_back">
+    <div class="container" id="container_mod_1">
+
+        <div class="inner">
+            <h2 class="title">Обратная связь</h2>
+        </div>
+
+        <div class="call_back_fields">
+
+            <form id="form">
+
+                <div class="fio">
+                    <div class="call_back_name">Ваше имя</div>
+                    <div class="call_back_input">
+                        <input class="call_back_input_field" type="text" name="fio">
+                    </div>
+                </div>
+
+                <div class="email">
+                    <div class="call_back_name">Ваш e-mail</div>
+                    <div class="call_back_input">
+                        <input class="call_back_input_field" type="text" name="email">
+                    </div>
+                </div>
+
+                <div class="message">
+                    <div class="call_back_name">Ваш текст</div>
+                    <div class="call_back_input">
+                        <textarea class="call_back_input_field" name="info" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+            </form>
+
+            <button class="btn_send" id="btn_send">
+                Отправить форму
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="end_of_page">
+    <div class="container">
+        <p>Волгоград 2021</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
