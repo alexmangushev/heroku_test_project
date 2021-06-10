@@ -1,8 +1,6 @@
 const root = document.getElementById('root')
 
-const port = process.env.PORT || 3000
-
-const domain = 'https://localhost:' + port
+const domain = 'https://localhost:3000'
 
 const login_Page = /* html */`
 <form class="login-form" onsubmit="loginSubmit(event)">
