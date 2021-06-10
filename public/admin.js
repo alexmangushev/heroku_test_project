@@ -1,5 +1,6 @@
 const root = document.getElementById('root')
-const domain = 'http://https://workeronline.herokuapp.com'
+const port = process.env.PORT || 3000
+const domain = 'http://https://workeronline.herokuapp.com' + port
 
 const login_Page = /* html */`
 <form class="login-form" onsubmit="loginSubmit(event)">
