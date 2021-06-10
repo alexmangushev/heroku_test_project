@@ -1,5 +1,5 @@
 const root = document.getElementById('root')
-const domain = 'http://https://workeronline.herokuapp.com/admin.html'
+const domain = 'https://localhost'
 
 const login_Page = /* html */`
 <form class="login-form" onsubmit="loginSubmit(event)">
