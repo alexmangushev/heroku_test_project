@@ -78,7 +78,7 @@ function start_App() {
     })*/
 
     //создаем админа
-    app.post('/api/admin', async function (req, res) {
+    /*app.post('/api/admin', async function (req, res) {
 
         //создаем hesh пароля
         const password_Hesh = createPasswordHash(req.body.password)
@@ -89,7 +89,7 @@ function start_App() {
             password: password_Hesh
         })
         res.send(new_Admin)
-    })
+    })*/
 
     //логинимся
     app.post('/api/login', async function (req, res) {
