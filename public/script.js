@@ -1,3 +1,4 @@
+  
 const MQTT_on = document.getElementById('btn_on')
 const MQTT_off = document.getElementById('btn_off')
 
@@ -8,16 +9,20 @@ function send(message_MQTT) {
     alert("Сообщение отправлено")
 
     //отправляем данные через POST запрос /api/MQTT
-    const response = await fetch('/api/MQTT', {
-        method: 'POST',
+    fetch('/api/MQTT', {
+        method: 'POST', //тип запроса
+        body: message_MQTT_JSON, // данные 
         headers: {
-            'Content-Type': 'application/json'
-        },
-        body: message_MQTT_JSON
+        'Content-Type': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            console.log("MQTT_ok")
+        }
+        else {
+            console.log("MQTT_something wrong")
+        }
     })
-    if (response.ok) {
-        console.log(await response.json())
-    }
 }
 
 MQTT_on.onclick = function() {
@@ -71,15 +76,19 @@ btn_in.onclick = function() {
     //console.log(message_info_JSON); 
 
     //отправляем данные через POST запрос /api/order
-    const response = await fetch('/api/order', {
-        method: 'POST',
+    fetch('/api/order', {
+        method: 'POST', //тип запроса
+        body: message_info_JSON, // данные 
         headers: {
-            'Content-Type': 'application/json'
-        },
-        body: message_info_JSON
+        'Content-Type': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            alert("ok")
+        }
+        else {
+            alert("something wrong")
+        }
     })
-    if (response.ok) {
-        console.log(await response.json())
-    }
 
 }
