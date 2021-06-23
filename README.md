@@ -18,4 +18,4 @@ npm start
 
 С реализацией MQTT на сервере помог LastLow098(https://github.com/LastLow098)
 
-https://workeronline.herokuapp.com/https://workeronline.herokuapp.com/ - сыслка на сайт
+https://workeronline.herokuapp.com/ - ссылка на сайт
